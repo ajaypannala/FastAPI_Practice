@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+psycopg2-binary
+pydantic-settings
+slowapi
+email-validator
+python-jose[cryptography]
+security
+passlib
+python-multipart
+argon2-cffi
