@@ -13,6 +13,7 @@ from app.core.limiter import limiter
 from app.routers.users import router as users_router
 from app.routers.products import router as products_router
 from app.routers.auth import router as auth_router
+from app.routers.files import router as files_router
 
 
 Base.metadata.create_all(bind=engine)
@@ -64,6 +65,7 @@ async def log_requests(request: Request, call_next):
 app.include_router(auth_router)
 app.include_router(users_router)
 app.include_router(products_router)
+app.include_router(files_router)
 
 
 @app.get("/")

@@ -8,8 +8,7 @@ from app.schemas.settings import Settings
 settings = Settings()
 DATABASE_URL = os.getenv(
     "DATABASE_URL",
-    f"postgresql+psycopg2://postgres:{settings.db_password}"
-    "@host.docker.internal:5432/user_product_db",
+    f"postgresql+psycopg2://postgres:{settings.db_password}@localhost:5432/user_product_db"
 )
 
 
